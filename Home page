@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .logo {
+            width: 100px;
+            margin-right: 15px;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(31, 31, 71);
+        }
+
+
+        /* Background */
+        body {
+            background-image: url("https://neu.edu.ph/main/img/mains.jfif");
+            background-color: #cccccc;
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* Login Container */
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-style: ridge;
+            border-width: 8px;
+            border-color: transparent;
+            background-color: rgba(255, 252, 247, 0.975);
+            border-radius: 7px;
+            text-align: center;
+            position: relative;
+            margin-top: 80px;
+        }
+
+
+        /* Welcome Message */
+        .welcome {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(31, 31, 71);
+            margin-bottom: 10px;
+            position: relative;
+            top: -10px;
+        }
+
+
+        /* Message */
+        .message {
+            font-size: 20px;
+            font-weight: lighter;
+            margin-top: 10px;
+        }
+
+
+        /* Form Inputs */
+        .log input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+
+        .log input[type="submit"] {
+            background-color: rgb(31, 31, 71);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+
+        .log input[type="submit"]:hover {
+            background-color: rgb(50, 50, 100);
+        }
+
+
+        /* Lost Password Link */
+        .lost-password {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .lost-password a {
+            color: rgb(31, 31, 71);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .lost-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Title -->
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/New_Era_University.svg/1200px-New_Era_University.svg.png" alt="NEU Logo" class="logo">
+        <p class="title">NEW ERA UNIVERSITY</p>
+    </div>
+
+
+    <!-- Login Form -->
+    <div class="container">
+        <p class="welcome">Welcome, please log in to continue, thank you!</p>
+        <p class="message">Please enter your credentials here.</p>
+        <form method="post" class="log">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+           
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+           
+            <input type="submit" value="Login">
+        </form>
+        <p class="lost-password"><a href="#">Lost password?</a></p>
+    </div>
+</body>
+</html>
+

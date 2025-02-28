@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgb(234, 234, 255);
+        }
+        .logo {
+            width: 80px;
+        }
+        .title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(31, 31, 71);
+        }
+
+
+        /* Background */
+        body {
+            background-image: url("https://neu.edu.ph/main/img/mains.jfif");
+            background-color: #cccccc;
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* Dashboard Container */
+        .container {
+            width: 400px;
+            padding: 20px;
+            border-style: ridge;
+            border-width: 5px;
+            border-color: transparent;
+            background-color: rgba(255, 252, 247, 0.975);
+            border-radius: 7px;
+            text-align: center;
+        }
+
+
+        /* Welcome Message */
+        .welcome {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(31, 31, 71);
+        }
+
+
+        /* Student Data Section */
+        .student-data {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+
+        /* Buttons */
+        .buttons button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgb(31, 31, 71);
+            color: white;
+        }
+        .buttons button:hover {
+            background-color: rgb(20, 20, 50);
+        }
+
+
+        /* Logout Link */
+        .logout {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .logout a {
+            color: rgb(31, 31, 71);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logout a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Title -->
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/New_Era_University.svg/1200px-New_Era_University.svg.png" alt="NEU Logo" class="logo">
+        <p class="title">STUDENT DASHBOARD</p>
+    </div>
+
+
+    <!-- Dashboard Content -->
+    <div class="container">
+        <p class="welcome">Welcome, {{ session['username'] }}!</p>
+        <p class="student-data">Student Data</p>
+        <div class="buttons">
+            <button>Show Students</button>
+            <button>Search Students</button>
+        </div>
+        <p class="logout"><a href="#">Logout</a></p>
+    </div>
+</body>
+</html>
+
